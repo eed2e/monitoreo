@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (empty($_SESSION['active'])) {
+	header('location: ../../');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +29,7 @@ session_start();
     <link rel="shortcut icon" href="../assets/images/favicon.png" />
   </head>
   <body>
+    
     <div class="container-scroller">
       <!-- Nav principal -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -76,7 +80,7 @@ session_start();
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
-              <span class="menu-title">inicio</span>
+              <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -123,7 +127,7 @@ session_start();
               <span class="menu-icon">
                 <i class="mdi mdi-history "></i>
               </span>
-              <span class="menu-title">Historial de nomina</span>
+              <span class="menu-title">Historico Reparaciones</span>
             </a>
           </li>
         </ul>
@@ -131,6 +135,7 @@ session_start();
       <!-- Nav superior -->
       <div class="container-fluid page-body">
         <!-- partial:partials/_navbar.html -->
+        
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -145,6 +150,7 @@ session_start();
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
                 </a>
+                
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                   <h6 class="p-3 mb-0">Perfil</h6>
                   <div class="dropdown-divider"></div>
@@ -154,6 +160,7 @@ session_start();
                         <i class="mdi mdi-logout text-danger"></i>
                       </div>
                     </div>
+                    
                     <div class="preview-item-content">
                       <p class="preview-subject mb-1">Log out</p>
                     </div>
@@ -166,6 +173,7 @@ session_start();
             </button>
           </div>
         </nav>
+        
         <!-- partial -->
         <div class="main-panel">  
             <div class="content-wrapper">
